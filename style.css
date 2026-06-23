@@ -1,0 +1,678 @@
+/*
+Theme Name: JnJ Landing
+Author: Pritul Gohil
+*/
+
+:root {
+  --jnj-blue: #006ecc;
+  --jnj-red: #ed1c24;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+.text-jnj-blue {
+  color: var(--jnj-blue) !important;
+}
+.text-jnj-red {
+  color: var(--jnj-red) !important;
+}
+.bg-jnj-blue {
+  background-color: var(--jnj-blue) !important;
+}
+.bg-jnj-red {
+  background-color: var(--jnj-red) !important;
+}
+
+
+/* ==================== Start Layout ==================== */
+
+.main-container{
+    position: relative;
+    padding: 100px 0 4rem;
+    min-height: 700px;
+    overflow: hidden;
+}
+
+@media (min-width: 2560px) {
+    .main-container {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.dot-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    padding: 0;
+}
+
+.dot-overlay {
+    background-image: url("../jnj-landing/assets/images/jnj-dots-pattern.png");
+    background-repeat: repeat;
+}
+
+.bg-layer {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+    padding: 0;
+}
+
+@media (min-width: 2560px) {
+    .bg-layer {
+        max-width: 1500px;
+    }
+}
+
+.bg-overlay {
+    background: rgba(198, 12, 48, 0.12);
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.title-line {
+    width: 300px;
+    height: 1.5px;
+    margin: 0 0 2rem;
+    background: var(--jnj-red);
+}
+
+.highlight-text strong, .highlight-text b {
+  color: var(--jnj-blue) !important;
+  font-weight: 700 !important;
+}
+/* ==================== End Layout ==================== */
+
+
+/* ==================== Start Hero Banner ==================== */
+.hero-section {
+  width: 100%;
+  height: 820px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-section .custom-social-icon {
+  height: 18px;
+  width: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.hero-section .custom-social-icon:hover {
+  transform: scale(1.1);
+}
+
+.hero-section .hero-copy-img {
+  width: 64vw;
+  max-width: 3840px;
+  height: auto;
+  margin-top: -120px;
+}
+
+.social-bar{
+    max-width: 1000px;
+}
+
+@media (max-width: 990px) {
+  .hero-section .hero-copy-img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .hero-section .hero-copy-img {
+    width: 66vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .hero-section .hero-copy-img {
+    width: 65vw;
+    margin-top: -140px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .hero-section .hero-copy-img {
+    width: 65vw;
+    margin-top: -180px;
+  }
+}
+
+@media (min-width: 3840px) {
+  .hero-section .hero-copy-img {
+    width: 66vw;
+    margin-top: -300px;
+  }
+}
+
+.hero-section .custom-scroll-graphic {
+  width: clamp(80px, 4vw, 120px);
+  height: auto;
+  display: block;
+  animation: scrollBounce 1.6s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+}
+/* ==================== End Hero Banner ==================== */
+
+
+
+/* ==================== Start OD Intro Section ==================== */
+.od-intro-section {
+  padding: 4rem 0;
+  background: #fff;
+}
+
+.od-intro-section .container {
+  max-width: 1000px;
+}
+
+.od-intro-logo {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.od-intro-logo img {
+  width: 100%;
+  max-width: 430px;
+  height: auto;
+  display: inline-block;
+}
+
+.od-intro-content {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  font-weight: 300;
+}
+
+.od-intro-content p {
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.od-intro-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  .od-intro-section {
+    padding: 3.5rem 0;
+  }
+
+  .od-intro-section .container {
+    max-width: 720px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+  .od-intro-section {
+    padding: 3rem 0;
+  }
+
+  .od-intro-logo {
+    margin-bottom: 2rem;
+  }
+
+  .od-intro-logo img {
+    max-width: 320px;
+  }
+
+  .od-intro-content {
+    font-size: 0.9rem;
+  }
+}
+/* ==================== End OD Intro Section ==================== */
+
+
+
+/* ==================== Start Top Reasons ==================== */
+
+.top-reasons-section {
+    background-color: ghostwhite;
+}
+
+.top-reasons-section .dot-layer .row,
+.top-reasons-section .dot-layer .dot-overlay {
+    height: 100%;
+    margin-top: 100px;
+}
+
+.top-reasons-section .dot-overlay {
+    background-image: url("../jnj-landing/assets/images/jnj-dots-pattern.png");
+    background-repeat: repeat;
+}
+
+.reasons-red-overlay-height {
+    height: 700px;
+}
+
+.reasons-red-overlay-top-position {
+    top: 250px;
+}
+
+.top-reasons-section .reason-item:last-child {
+    margin-bottom: 0 !important;
+}
+
+.top-reasons-section .jnj-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--jnj-blue);
+    color: #fff;
+    padding: 15px 25px 0;
+    letter-spacing: 3px;
+}
+
+/* ==================== End Top Reasons ==================== */
+
+
+
+
+/* ==================== Start Learn Section ==================== */
+
+.learn-section{
+    background-color: ghostwhite;
+}
+
+.learn-section .dot-layer .row, .learn-section .dot-layer .dot-overlay{
+    height: 98%;
+}
+
+.topic-col {
+    margin-bottom: 36px;
+}
+
+.topic-item {
+    padding: 10px;
+}
+
+.topic-icon img {
+    width: 84px;
+    height: 84px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.topic-title {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.learn-red-overlay-height{
+  height: 560px;
+}
+
+.learn-margin-top{
+  margin-top: 50px;
+}
+
+.learn-red-overlay-top-position{
+  top:200px;
+}
+
+.custom-learn-padding{
+  padding: 150px 0 4rem;
+}
+/* ==================== End Learn Section ==================== */
+
+/* ==================== Start Agenda Section ==================== */
+.agenda-section .dot-layer .row, .learn-section .dot-layer .dot-overlay{
+    height: 100%;
+    padding-top: 300px;
+}
+
+.agenda-red-overlay-top-position{
+    top: 350px;
+}
+
+.agenda-card-row {
+    margin-top: 35px;
+}
+
+.agenda-card-col {
+    max-width: 350px;
+}
+
+.agenda-card {
+    background-color: var(--jnj-red);
+    color: #fff;
+    padding: 20px 18px 28px;
+}
+
+.agenda-card-col:nth-child(2) .agenda-card {
+    background-color: var(--jnj-blue);
+}
+
+.agenda-date {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.agenda-avatar {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+    border: 4px solid #fff;
+}
+
+.agenda-speaker-name {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 14px;
+}
+
+.agenda-icon-stack {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.agenda-icon-stack img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.agenda-description {
+    font-size: 14px;
+    line-height: 1.45;
+    margin-bottom: 0;
+}
+
+.agenda-description-wrap.has-read-more .agenda-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.agenda-description-wrap.is-expanded .agenda-description {
+    display: block;
+    overflow: visible;
+}
+
+.read-more-btn {
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-top: 10px;
+    padding: 0;
+    cursor: pointer;
+}
+/* ==================== End Agenda Section ==================== */
+
+/* ==================== Start Location Section ==================== */
+
+.location-section .dot-layer .row, .location-section .dot-layer .dot-overlay{
+    height: 50%;
+    padding-top: 300px;
+}
+
+.location-red-overlay-top-position{
+    top: 150px;
+}
+
+.location-red-overlay-height{
+  height: 650px;
+}
+
+.location-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.location-title {
+    color: var(--jnj-red);
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.location-address {
+    color: #6b6b6b;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.location-link {
+    margin-bottom: 40px;
+}
+
+.location-link a {
+    color: var(--jnj-blue);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.location-link a:hover {
+    text-decoration: underline;
+}
+
+.location-contact-heading {
+    color: var(--jnj-red);
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.location-contact-text {
+    margin-bottom: 0;
+    color: #6b6b6b;
+}
+
+.location-contact-name {
+    color: var(--jnj-blue);
+    font-weight: 600;
+}
+
+.location-contact-text a {
+    color: var(--jnj-blue);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.location-contact-text a:hover {
+    text-decoration: underline;
+}
+
+/* ==================== End Location Section ==================== */
+
+
+.registration-section {
+    position: relative;
+    min-height: 850px;
+    padding: 70px 0 55px;
+    background-image: url("../jnj-landing/assets/images/JNJ-landingpage-registration-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.registration-content {
+    position: relative;
+    z-index: 3;
+    max-width: 980px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.registration-heading {
+    font-size: 38px;
+    font-weight: 300;
+    margin-bottom: 12px;
+}
+
+.registration-title-line {
+    width: 260px;
+    height: 1.5px;
+    background: #fff;
+    margin-bottom: 30px;
+}
+
+.registration-intro {
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.registration-section .form-control {
+    width: 100%;
+    height: 62px;
+    border: 0;
+    border-radius: 3px;
+    padding: 0 18px;
+    font-size: 13px;
+    color: #555;
+}
+
+.registration-section textarea.form-control {
+    height: 110px;
+    padding-top: 18px;
+    resize: none;
+}
+
+.registration-field-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.registration-section .wpcf7-radio {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.registration-section .wpcf7-list-item {
+    margin: 0;
+}
+
+.registration-section .wpcf7-list-item label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.registration-section input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #fff;
+}
+
+.registration-submit {
+    background: var(--jnj-blue);
+    color: #fff;
+    border: 0;
+    padding: 18px 120px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.registration-submit:hover {
+    background: #005bb0;
+}
+
+.registration-thank-you {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.registration-thank-you h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.registration-thank-you p {
+    font-size: 13px;
+    line-height: 1.35;
+    margin-bottom: 0;
+}
+
+.registration-section .wpcf7-not-valid-tip {
+    color: #fff;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.registration-section .wpcf7-response-output {
+    color: #fff;
+    border-color: #fff !important;
+    margin: 25px 0 0 !important;
+}
+
+@media (max-width: 767.98px) {
+    .registration-section {
+        padding: 50px 0;
+    }
+
+    .registration-heading {
+        font-size: 32px;
+    }
+
+    .registration-submit {
+        width: 100%;
+        padding: 16px 30px;
+    }
+}
+
+.site-footer {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-strip {
+    background-color: var(--jnj-blue); /* adjust to match screenshot */
+    color: #bfc9d8;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 10px 15px;
+    line-height: 1.2;
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.5/theme.json",
+  "version": 3,
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "slug": "jnj-blue",
+          "name": "JnJ Blue",
+          "color": "#006ecc"
+        },
+        {
+          "slug": "jnj-red",
+          "name": "JnJ Red",
+          "color": "#ed1c24"
+        }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "slug": "poppins",
+          "name": "Poppins",
+          "fontFamily": "\"Poppins\", sans-serif"
+        }
+      ]
+    }
+  }
+}
