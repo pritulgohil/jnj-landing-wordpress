@@ -1,32 +1,36 @@
 <?php
 
 /**
- * JnJ Landing functions and definitions
+ * JnJ Landing functions and definitions.
  *
  * @package JnJ_Landing
  */
 
+if (! defined('ABSPATH')) {
+    exit;
+}
+
 if (! function_exists('jnj_landing_setup')) :
     /**
-     * Sets up theme defaults and registers support for various WordPress features.
+     * Sets up theme defaults and registers support for WordPress features.
      */
     function jnj_landing_setup()
     {
-        // Add default posts and comments RSS feed links to head.
+        // Add default posts and comments RSS feed links to the document head.
         add_theme_support('automatic-feed-links');
 
         // Let WordPress manage the document title.
         add_theme_support('title-tag');
 
-        // Enable support for Post Thumbnails on posts and pages.
+        // Enable featured images for posts and pages.
         add_theme_support('post-thumbnails');
 
-        // Register Primary Navigation Menu
+        // Register theme navigation menus.
         register_nav_menus(array(
             'primary' => esc_html__('Primary Menu', 'jnj-landing'),
         ));
 
-        // Switch default core markup for search form, comment form, etc. to output valid HTML5.
+        // Output valid HTML5 markup for supported WordPress elements.
         add_theme_support('html5', array(
             'search-form',
             'comment-form',
@@ -41,45 +45,77 @@ endif;
 add_action('after_setup_theme', 'jnj_landing_setup');
 
 /**
- * Enqueue scripts and styles.
+ * Enqueues theme styles and scripts.
  */
 function jnj_landing_scripts()
 {
-    // Enqueue Google Fonts (Poppins)
-    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap', array(), null);
+    // Google Font: Poppins.
+    wp_enqueue_style(
+        'jnj-google-fonts',
+        'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap',
+        array(),
+        null
+    );
 
-    // Enqueue Bootstrap CSS
-    wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', array(), '5.3.3');
+    // Bootstrap CSS framework.
+    wp_enqueue_style(
+        'bootstrap-css',
+        'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css',
+        array(),
+        '5.3.3'
+    );
 
-    // Enqueue Theme Stylesheet last so custom font settings override Bootstrap.
-    wp_enqueue_style('jnj-landing-style', get_stylesheet_uri(), array('bootstrap-css', 'google-fonts'), '1.0.0');
+    // Main theme stylesheet. Loaded after Bootstrap so custom styles can override it.
+    wp_enqueue_style(
+        'jnj-landing-style',
+        get_stylesheet_uri(),
+        array('bootstrap-css', 'jnj-google-fonts'),
+        wp_get_theme()->get('Version')
+    );
 
+    // Main theme JavaScript.
     wp_enqueue_script(
-        'jnj-agenda',
+        'jnj-main',
         get_template_directory_uri() . '/assets/js/main.js',
         array(),
-        '1.0.0',
+        wp_get_theme()->get('Version'),
         true
     );
 
-    // Enqueue Bootstrap JS Bundle (includes Popper)
-    wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', array(), '5.3.3', true);
+    // Bootstrap JS bundle including Popper.
+    wp_enqueue_script(
+        'bootstrap-js',
+        'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',
+        array(),
+        '5.3.3',
+        true
+    );
 }
 add_action('wp_enqueue_scripts', 'jnj_landing_scripts');
 
-add_filter('acf/settings/save_json', function () {
+/**
+ * Saves ACF field group JSON files into the theme.
+ */
+function jnj_landing_acf_save_json()
+{
     return get_stylesheet_directory() . '/acf-json';
-});
-
-add_filter('acf/settings/load_json', function ($paths) {
-    unset($paths[0]);
-    $paths[] = get_stylesheet_directory() . '/acf-json';
-    return $paths;
-});
+}
+add_filter('acf/settings/save_json', 'jnj_landing_acf_save_json');
 
 /**
- * Custom Theme Core Extensions
+ * Loads ACF field group JSON files from the theme.
  */
+function jnj_landing_acf_load_json($paths)
+{
+    unset($paths[0]);
 
-// Load separated ACF Block definitions 
+    $paths[] = get_stylesheet_directory() . '/acf-json';
+
+    return $paths;
+}
+add_filter('acf/settings/load_json', 'jnj_landing_acf_load_json');
+
+/**
+ * Loads separated ACF block definitions.
+ */
 require_once get_theme_file_path('/inc/acf-blocks.php');

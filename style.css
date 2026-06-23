@@ -95,6 +95,8 @@ body {
 
 
 /* ==================== Start Hero Banner ==================== */
+
+/* Main hero wrapper and background image behavior */
 .hero-section {
   width: 100%;
   height: 820px;
@@ -103,6 +105,7 @@ body {
   background-repeat: no-repeat;
 }
 
+/* Social icon styling */
 .hero-section .custom-social-icon {
   height: 18px;
   width: auto;
@@ -111,10 +114,12 @@ body {
   transition: transform 0.2s ease;
 }
 
+/* Social icon hover interaction */
 .hero-section .custom-social-icon:hover {
   transform: scale(1.1);
 }
 
+/* Main foreground hero artwork */
 .hero-section .hero-copy-img {
   width: 64vw;
   max-width: 3840px;
@@ -122,10 +127,12 @@ body {
   margin-top: -120px;
 }
 
-.social-bar{
-    max-width: 1000px;
+/* Social bar content width */
+.social-bar {
+  max-width: 1000px;
 }
 
+/* Mobile and tablet hero artwork scaling */
 @media (max-width: 990px) {
   .hero-section .hero-copy-img {
     width: 100%;
@@ -133,6 +140,7 @@ body {
   }
 }
 
+/* Large screen hero artwork adjustments */
 @media (min-width: 1600px) {
   .hero-section .hero-copy-img {
     width: 66vw;
@@ -160,6 +168,7 @@ body {
   }
 }
 
+/* Scroll indicator graphic */
 .hero-section .custom-scroll-graphic {
   width: clamp(80px, 4vw, 120px);
   height: auto;
@@ -167,6 +176,7 @@ body {
   animation: scrollBounce 1.6s ease-in-out infinite;
 }
 
+/* Scroll indicator bounce animation */
 @keyframes scrollBounce {
   0% {
     transform: translateY(0);
@@ -183,44 +193,47 @@ body {
     opacity: 0.8;
   }
 }
+
 /* ==================== End Hero Banner ==================== */
 
 
 
 /* ==================== Start OD Intro Section ==================== */
+
+/* Main intro section spacing */
 .od-intro-section {
   padding: 4rem 0;
-  background: #fff;
 }
 
+/* Custom container width for intro content */
 .od-intro-section .container {
   max-width: 1000px;
 }
 
+/* Intro logo spacing */
 .od-intro-logo {
-  text-align: center;
   margin-bottom: 2.5rem;
 }
 
+/* Intro logo image sizing */
 .od-intro-logo img {
-  width: 100%;
   max-width: 430px;
-  height: auto;
-  display: inline-block;
 }
 
+/* Intro content typography */
 .od-intro-content {
   font-size: 0.95rem;
   line-height: 1.6;
   color: #555;
-  font-weight: 300;
 }
 
+/* Centered paragraph spacing */
 .od-intro-content p {
   margin-bottom: 1.25rem;
   text-align: center;
 }
 
+/* Remove spacing from last paragraph */
 .od-intro-content p:last-child {
   margin-bottom: 0;
 }
@@ -254,44 +267,49 @@ body {
     font-size: 0.9rem;
   }
 }
+
 /* ==================== End OD Intro Section ==================== */
 
 
 
 /* ==================== Start Top Reasons ==================== */
 
+/* Section background behind content and decorative overlays */
 .top-reasons-section {
     background-color: ghostwhite;
 }
 
+/* Creates the dotted pattern area that sits behind the content */
 .top-reasons-section .dot-layer .row,
 .top-reasons-section .dot-layer .dot-overlay {
     height: 100%;
     margin-top: 100px;
 }
 
+/* Repeating decorative dot pattern */
 .top-reasons-section .dot-overlay {
     background-image: url("../jnj-landing/assets/images/jnj-dots-pattern.png");
     background-repeat: repeat;
 }
 
+/* Height of the large red decorative overlay block */
 .reasons-red-overlay-height {
     height: 700px;
 }
 
+/* Positions the red overlay lower on the page */
 .reasons-red-overlay-top-position {
     top: 250px;
 }
 
+/* Remove bottom spacing from the final reason item */
 .top-reasons-section .reason-item:last-child {
     margin-bottom: 0 !important;
 }
 
+/* CTA button custom brand styling */
 .top-reasons-section .jnj-btn {
-    display: inline-block;
-    text-decoration: none;
     background-color: var(--jnj-blue);
-    color: #fff;
     padding: 15px 25px 0;
     letter-spacing: 3px;
 }
@@ -303,120 +321,126 @@ body {
 
 /* ==================== Start Learn Section ==================== */
 
-.learn-section{
-    background-color: ghostwhite;
-}
-
-.learn-section .dot-layer .row, .learn-section .dot-layer .dot-overlay{
+/* Creates the dotted pattern area that sits behind the learn content */
+.learn-section .dot-layer .row,
+.learn-section .dot-layer .dot-overlay {
     height: 98%;
 }
 
+/* Spacing between topic columns */
 .topic-col {
     margin-bottom: 36px;
 }
 
-.topic-item {
-    padding: 10px;
-}
-
+/* Topic icon sizing and spacing */
 .topic-icon img {
     width: 84px;
     height: 84px;
-    object-fit: contain;
     margin-bottom: 12px;
 }
 
+/* Topic title custom font size */
 .topic-title {
     font-size: 24px;
-    font-weight: 400;
-    margin: 0;
 }
 
-.learn-red-overlay-height{
-  height: 560px;
+/* Height of the large red decorative overlay block */
+.learn-red-overlay-height {
+    height: 560px;
 }
 
-.learn-margin-top{
-  margin-top: 50px;
+/* Pushes the topic grid below the heading area */
+.learn-margin-top {
+    margin-top: 50px;
 }
 
-.learn-red-overlay-top-position{
-  top:200px;
+/* Positions the red overlay lower on the page */
+.learn-red-overlay-top-position {
+    top: 200px;
 }
 
-.custom-learn-padding{
-  padding: 150px 0 4rem;
+/* Custom section padding when this utility class is applied */
+.custom-learn-padding {
+    padding: 150px 0 4rem;
 }
+
 /* ==================== End Learn Section ==================== */
 
 /* ==================== Start Agenda Section ==================== */
-.agenda-section .dot-layer .row, .learn-section .dot-layer .dot-overlay{
+
+/* Creates the dotted pattern area that sits behind the agenda content */
+.agenda-section .dot-layer .row,
+.agenda-section .dot-layer .dot-overlay {
     height: 100%;
     padding-top: 300px;
 }
 
-.agenda-red-overlay-top-position{
+/* Positions the red overlay lower on the page */
+.agenda-red-overlay-top-position {
     top: 350px;
 }
 
+/* Pushes the agenda cards below the heading area */
 .agenda-card-row {
     margin-top: 35px;
 }
 
+/* Limits the maximum width of each agenda card column */
 .agenda-card-col {
     max-width: 350px;
 }
 
+/* Base agenda card styling */
 .agenda-card {
     background-color: var(--jnj-red);
-    color: #fff;
     padding: 20px 18px 28px;
 }
 
+/* Makes the second agenda card use the blue brand color */
 .agenda-card-col:nth-child(2) .agenda-card {
     background-color: var(--jnj-blue);
 }
 
+/* Agenda card date typography and spacing */
 .agenda-date {
     font-size: 18px;
-    font-weight: 700;
     margin-bottom: 18px;
 }
 
+/* Speaker avatar image sizing and shape */
 .agenda-avatar {
     width: 135px;
     height: 135px;
     border-radius: 50%;
-    object-fit: cover;
     margin-bottom: 16px;
     border: 4px solid #fff;
 }
 
+/* Speaker name typography and spacing */
 .agenda-speaker-name {
     font-size: 18px;
-    font-weight: 400;
     margin-bottom: 14px;
 }
 
+/* Icon stack spacing under speaker name */
 .agenda-icon-stack {
-    display: flex;
-    justify-content: center;
     gap: 14px;
     margin-bottom: 16px;
 }
 
+/* Speaker icon sizing */
 .agenda-icon-stack img {
     width: 40px;
     height: 40px;
-    object-fit: contain;
 }
 
+/* Speaker description typography */
 .agenda-description {
     font-size: 14px;
     line-height: 1.45;
-    margin-bottom: 0;
 }
 
+/* Clamp long descriptions before Read More is clicked */
 .agenda-description-wrap.has-read-more .agenda-description {
     display: -webkit-box;
     -webkit-line-clamp: 10;
@@ -424,102 +448,101 @@ body {
     overflow: hidden;
 }
 
+/* Show full description after Read More is clicked */
 .agenda-description-wrap.is-expanded .agenda-description {
     display: block;
     overflow: visible;
 }
 
+/* Read More button typography and spacing */
 .read-more-btn {
-    background: transparent;
-    border: 0;
-    color: #fff;
     font-size: 11px;
     font-weight: 600;
-    text-decoration: underline;
     margin-top: 10px;
-    padding: 0;
     cursor: pointer;
 }
+
 /* ==================== End Agenda Section ==================== */
 
 /* ==================== Start Location Section ==================== */
 
-.location-section .dot-layer .row, .location-section .dot-layer .dot-overlay{
+/* Creates the dotted pattern area on the right side of the section */
+.location-section .dot-layer .row,
+.location-section .dot-layer .dot-overlay {
     height: 50%;
     padding-top: 300px;
 }
 
-.location-red-overlay-top-position{
+/* Positions the red overlay behind the location content */
+.location-red-overlay-top-position {
     top: 150px;
 }
 
-.location-red-overlay-height{
-  height: 650px;
+/* Height of the decorative red overlay block */
+.location-red-overlay-height {
+    height: 650px;
 }
 
-.location-image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
+/* Location title typography */
 .location-title {
     color: var(--jnj-red);
     font-size: 2rem;
-    font-weight: 300;
     margin-bottom: 10px;
 }
 
+/* Address typography and spacing */
 .location-address {
     color: #6b6b6b;
     font-size: 1rem;
     margin-bottom: 8px;
 }
 
+/* Spacing below the location link */
 .location-link {
     margin-bottom: 40px;
 }
 
+/* Location link brand color */
 .location-link a {
     color: var(--jnj-blue);
-    text-decoration: none;
-    font-weight: 600;
 }
 
+/* Underline location link on hover */
 .location-link a:hover {
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
+/* Contact heading typography */
 .location-contact-heading {
     color: var(--jnj-red);
     font-size: 2rem;
-    font-weight: 300;
     margin-bottom: 10px;
 }
 
+/* Contact paragraph text color */
 .location-contact-text {
-    margin-bottom: 0;
     color: #6b6b6b;
 }
 
+/* Contact name brand color */
 .location-contact-name {
     color: var(--jnj-blue);
-    font-weight: 600;
 }
 
+/* Contact email link brand color */
 .location-contact-text a {
     color: var(--jnj-blue);
-    font-weight: 600;
-    text-decoration: none;
 }
 
+/* Underline email link on hover */
 .location-contact-text a:hover {
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
 /* ==================== End Location Section ==================== */
 
 
+/* ==================== Start Registration Form Section ==================== */
 .registration-section {
     position: relative;
     min-height: 850px;
@@ -669,10 +692,11 @@ body {
 }
 
 .footer-strip {
-    background-color: var(--jnj-blue); /* adjust to match screenshot */
+    background-color: var(--jnj-blue);
     color: #bfc9d8;
     font-size: 14px;
     font-weight: 300;
     padding: 10px 15px;
     line-height: 1.2;
 }
+/* ==================== End Registration Form Section ==================== */

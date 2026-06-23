@@ -22,9 +22,7 @@ get_header('landing');
 
 </main>
 
-<?php get_template_part('template-parts/sections/registration'); ?>
-
-<?php get_footer(); ?>
-
 <?php
+get_template_part('template-parts/sections/registration');
+
 get_footer('landing');
